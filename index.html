@@ -1,0 +1,79 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD8B9YK81K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZD8B9YK81K');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple game to make you stay home. STAY HOME...STAY SAFE...">
+
+  <title>HURDLE RUN</title>
+  
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+  <script src="js/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+
+  <link href="css/main.css" rel="stylesheet" id="bootstrap-css">
+  <script src="js/velocity.min.js"></script>
+
+</head>
+
+<body>
+
+ <!--  <button type="button"  data-toggle="modal" data-target="#myModal" class="align-middle btn btn-success startGameButton" onclick="startGame()" ontouchstart="startGame()">Start Game</button> -->
+
+ <div id="titleArea" class="float-left titleCard">HURDLE RUN</div>
+ <div id="gameScore" class="float-right scoreCard">Score : 0000</div>
+
+ <!-- </br> -->
+ <script> touchAvailable = false; </script>
+ <div id="game-area" class="jumbotron page-holder bg-cover" ontouchstart="touchAvailable=true; moveup();" onclick="if(!touchAvailable) moveup();">
+  <div class="ball"><i class="fas fa-frog"></i></div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">HURDLE RUN</h4>
+        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Press below button to start the game...!
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer text-align-center">
+       <button id="startButton" type="button" class="align-middle btn btn-success" onclick="startGame()" ontouchstart="startGame()">Start Run</button>
+       <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+     </div>
+
+   </div>
+ </div>
+</div>
+</body>
+
+
+<script src="js/game.js"></script>
+</html>

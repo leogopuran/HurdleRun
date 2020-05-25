@@ -1,0 +1,189 @@
+
+
+@font-face {
+        font-family: "Mi Nuevo Display St";
+        src: url("../font/Mi Nuevo Display St.ttf");
+}
+* {
+    font-family: "Mi Nuevo Display St";
+}
+
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+@-webkit-keyframes animateObstacle {
+	0% { left: 100%;}
+	100%{ left: 0;}
+	from { -webkit-transform: rotate(359deg);}
+	to { -webkit-transform: rotate(0deg);}
+}
+
+#game-area	{ 
+	/*width: 100%; */
+	/*height: 172px;*/
+	/*margin-top: 5%; */
+	background-image: url("../images/bg2.png");
+	/*background-position: 0px 0px;*/
+	background-repeat: repeat-x;
+	/*position: absolute;*/
+	margin-bottom: 0;
+
+	animation: animatedBackground 10s linear infinite;
+}
+
+.page-holder {
+	min-height: 100vh;
+}
+
+.bg-cover {
+	background-size: auto 100%;
+	/*background-size: cover !important;*/
+}
+
+.startGameButton{
+	position: absolute;
+}
+
+.ball {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	bottom: 0;
+	/*background-color: #222;*/
+	/*border-radius: 50%;*/
+	float: left;
+	position: absolute;
+	bottom: 6%;
+	background-image: url("../images/skating.svg");
+	display: block;
+}
+
+.scoreCard{
+	color: white;
+	font-size: 30px;
+	/*font-weight: bold;*/
+	/*border: 1px solid;*/
+	/*border-radius: 7px;*/
+	/*background-color: #ffffff3d;*/
+	margin: 2%;
+	margin-top: 2%
+	padding: 20px;
+}
+
+.titleCard{
+	color: white;
+	font-size: 38px;
+	/*font-weight: bold;*/
+	/*border: 1px solid;*/
+	/*border-radius: 7px;*/
+	/*background-color: #ffffff3d;*/
+	margin: 2%;
+	margin-top: 2%
+	padding: 20px;
+}
+
+.obstacle{
+	float: right;
+	position:absolute;
+	-webkit-animation: 8s linear;
+	-webkit-animation-name: animateObstacle;
+	/*-webkit-animation-duration: 6s;*/
+}
+
+.obstacle1{
+	width: 100px;
+	height: 100px;
+	background-image: url(../images/virus_sm.svg);
+	bottom: 6%;
+	display: block;
+
+}
+
+.obstacle2{
+	width: 100px;
+	height: 100px;
+	background-image: url(../images/virus_sm.svg);
+	bottom: 6%;
+	display: block;
+}
+
+.obstacle3{
+	width: 130px;
+	height: 130px;
+	background-image: url(../images/virus_lg.svg);
+	display: block;
+	bottom: 6%;
+}
+
+.obstacle4{
+	width: 115px;
+	height: 115px;
+	bottom: 6%;
+	background-image: url(../images/virus_md.svg);
+	display: block;
+}
+
+.obstacle5{
+	width: 115px;
+	height: 115px;
+	bottom: 6%;
+	background-image: url(../images/virus_md.svg);
+	display: block;
+}
+
+@media only screen and (max-width: 600px) {
+	#game-area { 
+		animation: animatedBackground 15s linear infinite;
+	}
+
+	.obstacle{
+	float: right;
+	position:absolute;
+	-webkit-animation: 1500ms linear;
+	-webkit-animation-name: animateObstacle;
+	/*-webkit-animation-duration: 6s;*/
+}
+
+	.obstacle1{
+		width: 100px;
+		height: 100px;
+		/*background-color: black;*/
+		/*background-image: url(../images/stone_mob.svg);*/
+		bottom: 6%;
+	}
+
+	.obstacle2{
+		width: 100px;
+		height: 100px;
+		/*background-color: blue;*/
+		/*background-image: url(../images/stone_mob.svg);*/
+		bottom: 6%;
+	}
+
+	.obstacle3{
+		width: 130px;
+		height: 130px;
+		/*background-color: red;*/
+		/*background-image: url(../images/stone_mob.svg);*/
+		bottom: 6%;
+	}
+
+	.obstacle4{
+		width: 115px;
+		height: 115px;
+		/*background-color: yellow;*/
+		/*background-image: url(../images/stone_mob.svg);*/
+		bottom: 6%;
+	}
+
+	.obstacle5{
+		width: 115px;
+		height: 115px;
+		/*background-color: white;*/
+		/*background-image: url(../images/stone_mob.svg);*/
+		bottom: 6%;
+	}
+}
